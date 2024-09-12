@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfigurator Przyczep</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Menu na górze -->
+    <header class="main-header">
+        <div class="menu-container">
+            <div class="menu-item">Modele</div>
+            <div class="menu-item">1</div>
+            <div class="menu-item">2</div>
+            <div class="menu-item">3</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="view-container">
+            <div id="weight" class="weight-display">DMC</div>
+            <div class="view" id="view">
+                <div class="image-wrapper">
+                    <img id="viewImage" src="" alt="Widok przyczepy">
+                </div>
+            </div>
+            <div class="view-controls">
+                <button id="prevView">&larr;</button>
+                <button id="nextView">&rarr;</button>
+            </div>
+        </div>
+
+        <div class="options-container">
+            <div class="model-title" id="modelTitle">SIDEWAY</div>
+            <h3>Opcje konfiguratora</h3>
+
+            <div class="option-group" data-option="size">
+                <h4>
+                    Wybierz rozmiar: 
+                    <button class="toggle-options" data-target="size">&#9660;</button>
+                    <span class="selected-option">Wybierz...</span>
+                </h4>
+                <div class="options-list hidden" id="sizeOptions">
+                    <div class="option-tile" data-size="small">Mały</div>
+                    <div class="option-tile" data-size="medium">Średni</div>
+                    <div class="option-tile" data-size="large">Duży</div>
+                </div>
+            </div>
+            
+            <div class="option-group" data-option="color">
+                <h4>
+                    Wybierz kolor: 
+                    <button class="toggle-options" data-target="color">&#9660;</button>
+                    <span class="selected-option">Wybierz...</span>
+                </h4>
+                <div class="options-list hidden" id="colorOptions">
+                    <div class="option-tile" data-color="red">
+                        <span class="color-circle" style="background-color: red;"></span>
+                        Czerwony</div>
+                    <div class="option-tile" data-color="blue">
+                        <span class="color-circle" style="background-color: rgb(0, 110, 255);"></span>
+                        Niebieski
+                    </div>
+                    <div class="option-tile" data-color="green">
+                        <span class="color-circle" style="background-color: green;"></span>
+                        Zielony
+                    </div>
+                </div>
+            </div>
+            
+            <div class="option-group" data-option="axle">
+                <h4>
+                    Rodzaj osi: 
+                    <button class="toggle-options" data-target="axle">&#9660;</button>
+                    <span class="selected-option">Wybierz...</span> <!-- Element do wyświetlania wybranej opcji -->
+                </h4>
+                <div class="options-list hidden" id="axleOptions">
+                    <div class="option-tile" data-axle="single" data-weight="100">Pojedyncza (+100kg)</div>
+                    <div class="option-tile" data-axle="double" data-weight="200">Podwójna (+200)</div>
+                </div>
+            </div>
+            
+            <div class="option-group" data-option="type">
+                <h4>
+                    Typ przyczepy: 
+                    <button class="toggle-options" data-target="type">&#9660;</button>
+                    <span class="selected-option">Wybierz...</span>
+                </h4>
+                <div class="options-list hidden" id="typeOptions">
+                    <div class="option-tile" data-type="flatbed" data-weight="100">Płaska (+100kg)</div>
+                    <div class="option-tile" data-type="enclosed" data-weight="235">Zamknięta (+235kg)</div>
+                </div>
+            </div>
+            
+            <div class="option-group" data-option="accessory" data-multi-select="true">
+                <h4>
+                    Akcesoria: 
+                    <button class="toggle-options" data-target="accessory">&#9660;</button>
+                    <span class="selected-option">Wybierz...</span>
+                </h4>
+                <div class="options-list hidden" id="accessoryOptions">
+                    <div class="option-tile" data-accessory="toolbox" data-weight="45">Skrzynia narzędziowa (+45)</div>
+                    <div class="option-tile" data-accessory="jacks" data-weight="22.5">Podnośniki (+22.5)</div>
+                    <div class="option-tile" data-accessory="ramp" data-weight="87">Rampa (+87)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
